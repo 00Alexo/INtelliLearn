@@ -18,6 +18,7 @@ const MinaAi = () => {
         try{
             const res = await fetch('https://intellilearn.onrender.com/chatbot', {
                 method: 'POST',
+                mode: 'no-cors',
                 headers: {
                     'Content-Type': 'application/json',
                 },
