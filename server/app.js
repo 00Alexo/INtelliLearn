@@ -14,7 +14,12 @@ const runRouter = require('./routes/run')
 app.use(express.json())
 app.use(cookieParser())
 const cors = require('cors')
-app.use(cors({ credentials: true, origin: 'https://intellilearn-nine.vercel.app' }))
+app.use(cors({
+    origin: function(origin, callback){
+        return callback(null, true);
+    },
+    credentials: true
+}));
 const bodyParser = require('body-parser')
 app.use(bodyParser.json());
 app.use('/run', runRouter)
@@ -25,19 +30,21 @@ const socketIO = require('socket.io')
 const server = require('http').createServer(app)
 const io = socketIO(server, {
     cors: {
-        origin: "https://intellilearn-nine.vercel.app",
+        origin: function(origin, callback){
+            return callback(null, true);
+        },
         methods: ["GET", "POST", "PUT", "DELETE"],
         credentials: true
     }
 })
 ////////////////////////////////////////////////////////////////////////////////////////////
 app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "https://intellilearn-nine.vercel.app");
+    res.header("Access-Control-Allow-Origin", req.headers.origin);
     res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
     res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
     res.header("Access-Control-Allow-Credentials", "true");
     next();
-});
+});;
 ////////////////////////////////////////////////////////////////////////////////////////////
 io.on('connection', (socket) => {
     socket.on('join', (classroomId) => {
