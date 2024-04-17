@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 export const useGetMessages = (id) => {
     const fetchMessages = async() => {
         try{
-            const res = await fetch(`http://localhost:8080/classroom/messages/${id}`, {
+            const res = await fetch(`https://intellilearn.onrender.com/classroom/messages/${id}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',

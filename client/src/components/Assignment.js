@@ -29,7 +29,7 @@ export const Assignment = () => {
     const submitAssignment = async() => {
         try{
             setLoading(true)
-            const res = await fetch(`http://localhost:8080/run/run`, {
+            const res = await fetch(`https://intellilearn.onrender.com/run/run`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

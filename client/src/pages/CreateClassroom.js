@@ -20,7 +20,7 @@ export const CreateClassroom = () => {
     const publishClassroom = async(e) => {
         e.preventDefault()
         try{
-            const res = await fetch('http://localhost:8080/classroom/publish', {
+            const res = await fetch('https://intellilearn.onrender.com/classroom/publish', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

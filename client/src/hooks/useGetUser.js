@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 export const useGetUser = (id) => {
   const fetchUser = async () => {
-    const req = await fetch(`http://localhost:8080/user/getUser/${id}`, {
+    const req = await fetch(`https://intellilearn.onrender.com/user/getUser/${id}`, {
       method: "POST",
       credentials: "include",
       headers: {

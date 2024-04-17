@@ -18,7 +18,7 @@
         console.log(messages)
         messages = messages || []
         const [messageInput, setMessageInput] = useState('');
-        const socket = io('http://localhost:8080');
+        const socket = io('https://intellilearn.onrender.com');
         useEffect(() => {
             if (!classroom) return;
             console.log('Joining room', id);    

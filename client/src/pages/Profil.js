@@ -84,7 +84,7 @@ const Profil = () => {
     const [userPhoto, setUserPhoto] = useState('');
 
     const handlePhotoChange = async () =>{
-      const response = await fetch(`http://localhost:8080/user/updateProfilePhoto`, {
+      const response = await fetch(`https://intellilearn.onrender.com/user/updateProfilePhoto`, {
         method: 'POST',
         headers:{
           'Content-Type': 'application/json',
@@ -102,7 +102,7 @@ const Profil = () => {
 
     const handleRateMentor = async (rate) =>{
         console.log(rate);
-        const response = await fetch(`http://localhost:8080/user/giveStars`, {
+        const response = await fetch(`https://intellilearn.onrender.com/user/giveStars`, {
           method: 'POST',
           headers:{
             'Content-Type': 'application/json',

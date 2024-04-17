@@ -1,7 +1,7 @@
 import {useQuery} from '@tanstack/react-query'
 export const useGetClassrooms = () => {
     const fetchClassrooms = async () => {
-        const req = await fetch('http://localhost:8080/classroom/', {
+        const req = await fetch('https://intellilearn.onrender.com/classroom/', {
             method: 'GET',
             credentials: 'include'
         })

@@ -16,7 +16,7 @@ const MinaAi = () => {
     const getPrompt = async() => {
         prompts.push(prompt)
         try{
-            const res = await fetch('http://localhost:8080/chatbot', {
+            const res = await fetch('https://intellilearn.onrender.com/chatbot', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

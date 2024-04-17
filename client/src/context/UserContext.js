@@ -8,7 +8,7 @@ const UserContextProvider = ({ children }) => {
     useEffect(() => {
         const fetchUser = async () => {
             try {
-                const response = await fetch('http://localhost:8080/user/getUser', {
+                const response = await fetch('https://intellilearn.onrender.com/user/getUser', {
                     credentials: 'include',
                     method: 'GET'
                 });

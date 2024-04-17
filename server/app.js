@@ -14,7 +14,7 @@ const runRouter = require('./routes/run')
 app.use(express.json())
 app.use(cookieParser())
 const cors = require('cors')
-app.use(cors({ credentials: true, origin: 'http://localhost:3000' }))
+app.use(cors({ credentials: true, origin: 'https://intellilearn.onrender.com' }))
 const bodyParser = require('body-parser')
 app.use(bodyParser.json());
 app.use('/run', runRouter)
@@ -25,14 +25,14 @@ const socketIO = require('socket.io')
 const server = require('http').createServer(app)
 const io = socketIO(server, {
     cors: {
-        origin: "http://localhost:3000",
+        origin: "https://intellilearn.onrender.com",
         methods: ["GET", "POST", "PUT", "DELETE"],
         credentials: true
     }
 })
 ////////////////////////////////////////////////////////////////////////////////////////////
 app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+    res.header("Access-Control-Allow-Origin", "https://intellilearn.onrender.com");
     res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
     res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
     res.header("Access-Control-Allow-Credentials", "true");

@@ -118,7 +118,7 @@ const SignUp = () => {
     }
     const onSubmit = async (e) => {
         e.preventDefault();
-        const res = await fetch('http://localhost:8080/user/register', {
+        const res = await fetch('https://intellilearn.onrender.com/user/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

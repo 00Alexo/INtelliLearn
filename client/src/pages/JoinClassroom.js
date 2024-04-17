@@ -13,7 +13,7 @@ const JoinClassroom = () => {
     const [password, setPassword] = useState('')
     const onJoinClassroom = async(id) => {
         try {
-            const request = await fetch(`http://localhost:8080/classroom/join/${id}`, {
+            const request = await fetch(`https://intellilearn.onrender.com/classroom/join/${id}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -25,7 +25,7 @@ export const PostAssignment = () => {
             return
         }
         try{
-            const res = await fetch(`http://localhost:8080/classroom/publish/${id}/assignment`, {
+            const res = await fetch(`https://intellilearn.onrender.com/classroom/publish/${id}/assignment`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

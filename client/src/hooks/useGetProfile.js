@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query"
 export const useGetProfile = (username) => {
     const fetchProfile = async() => {
         try{
-            const request = await fetch(`http://localhost:8080/user/getUser/${username}`, {
+            const request = await fetch(`https://intellilearn.onrender.com/user/getUser/${username}`, {
                 method: 'GET',
                 credentials: 'include'
             })
