@@ -1,0 +1,28 @@
+.contains-fullsearchpage{
+    width: 90%;
+    margin: 0 auto;;
+}
+
+.contains-search{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.contains-search div{
+    font-size: 1.4rem;
+    text-align: center;
+    width: 32%;
+    height:100%;
+}
+
+.search-student{
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+}
+
+.contains-search-students{
+    margin: 0 auto;
+}
